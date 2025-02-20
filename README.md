@@ -10,11 +10,11 @@ Budget Buddy is a tool that allows you to track and organize your monthly expens
 
 **Tech used:** TypeScript, React, Appwrite, GoogleAuth
 
-This project was made in 48 hours for the 100Devs 2025 hackathon in Febuary! I built this tool because, as someone who's always been a penny pincher, I know how INCREDIBLY important it is to stay on top of your finances. When people have a clear picture of where every dollar is going, it becomes much easier to save money and take care of themselves and those who matter most.💕
+This project was made in 48 hours for the 100Devs 2025 hackathon in Febuary! As someone who's always been a penny pincher, I know how incredibly important it is to stay on top of your finances. When people have a clear picture of where every dollar is going, it becomes much easier to save money and take care of themselves and those who matter most.💕
 
 ## Optimizations
 
-Since this project was created very quickly, I'm already aware of a handful of optimizations. There's a lot of data fetching happening in the app, so I’d like to add a loading spinner while the data is being fetched. I also think I can clean up the way expenses are added since they're all pretty similar. I might try adding them in a similar way to how they're deleted (which only uses one function). Also, I'd like to have a way to keep track of the user's income because right now, it disappears when the page refreshes.
+There's a lot of data fetching happening in the app, so I’d like to add a loading spinner while the data is being fetched. I also think I can clean up the way expenses are added since they're all pretty similar. I might try adding them in a similar way to how they're deleted (which only uses one function). Also, I'd like to have a way to keep track of the user's income because right now, it disappears when the page refreshes.
 
 ## Lessons Learned:
 
