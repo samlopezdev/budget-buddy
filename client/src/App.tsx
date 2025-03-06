@@ -1,7 +1,7 @@
 import { FormEvent, useEffect, useState } from "react";
-import { Client, Databases, ID, OAuthProvider, Query } from "appwrite";
+import { ID, OAuthProvider, Query } from "appwrite";
 import Category from "./components/Category";
-import { account } from "./appwrite";
+import { account, databases } from "./appwrite";
 import "./App.css";
 
 interface Expense {
@@ -10,12 +10,6 @@ interface Expense {
   amount: number;
   $id: string;
 }
-
-const client = new Client()
-  .setEndpoint("https://cloud.appwrite.io/v1")
-  .setProject(import.meta.env.VITE_PROJECT_ID);
-
-const databases = new Databases(client);
 
 export default function App() {
   const [user, setUser] = useState('');
@@ -383,10 +377,12 @@ export default function App() {
       try {
         console.log(`Use Effect getUser Ran.`);
         const userData = await account.get();
+
         console.log(userData.email);
         setUser(userData.email);
+        
       } catch (err) {
-        console.error(`MAYDAY: ${err}`);
+        console.error(`MAYDAY?: ${err}`);
       }
     };
 
@@ -496,7 +492,7 @@ export default function App() {
           }))
         );
       } catch (err) {
-        console.error(`MAYDAY!!: ${err}`);
+        console.error(`MAYDAY ---!!: ${err}`);
       }
     };
 
