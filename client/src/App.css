@@ -9,7 +9,6 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: start;
-  
   justify-content:baseline;
 }
 
@@ -102,6 +101,7 @@ button:hover {
   outline: none;
   border: none;
   border-bottom: 2px solid transparent;
+  width: 50%;
 }
 
 .category form input:focus {
@@ -113,7 +113,7 @@ button:hover {
 }
 
 .category {
-  max-width: 500px;
+  width: 500px;
   /* margin: auto; */
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -186,4 +186,16 @@ button:hover {
 /* Footer */
 footer {
   margin-top: 2rem;
+}
+
+
+/* Big Screens */
+@media all and (min-width: 1280px) {
+  #root {
+    max-width: 1400px;
+  }
+
+  .category {
+    width: 30%;
+  }
 }
