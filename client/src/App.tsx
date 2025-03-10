@@ -12,7 +12,7 @@ interface Expense {
 }
 
 export default function App() {
-  const [user, setUser] = useState('');
+  const [user, setUser] = useState("");
   const [income, setIncome] = useState(0);
   const [remainingIncome, setRemainingIncome] = useState(0);
   const [personalExpenses, setPersonalExpenses] = useState<Expense[]>([]);
@@ -27,9 +27,19 @@ export default function App() {
   // Authentication
   const handleLogin = async () => {
     console.log(`Handlin login`);
+
+    // try {
+    //   await account.createOAuth2Token(
+    //     OAuthProvider.Google,
+    //     "http://localhost:5173/"
+    //   );
+    // } catch (err) {
+    //   console.error('Error creating OAuth url', err)
+    // }
+
     await account.createOAuth2Session(
       OAuthProvider.Google, // provider
-      'https://budgetbuddytracker.netlify.app' // success (optional)
+      "https://budgetbuddytracker.netlify.app/" // success (optional)
       //"http://localhost:5173/fail" // failure (optional)
     );
   };
@@ -120,7 +130,7 @@ export default function App() {
         {
           expense_name: expenseName,
           amount: amount,
-          user_id: userId
+          user_id: userId,
         }
       );
 
@@ -161,7 +171,7 @@ export default function App() {
         {
           expense_name: expenseName,
           amount: amount,
-          user_id: userId
+          user_id: userId,
         }
       );
 
@@ -202,7 +212,7 @@ export default function App() {
         {
           expense_name: expenseName,
           amount: amount,
-          user_id: userId
+          user_id: userId,
         }
       );
 
@@ -243,7 +253,7 @@ export default function App() {
         {
           expense_name: expenseName,
           amount: amount,
-          user_id: userId
+          user_id: userId,
         }
       );
 
@@ -284,7 +294,7 @@ export default function App() {
         {
           expense_name: expenseName,
           amount: amount,
-          user_id: userId
+          user_id: userId,
         }
       );
 
@@ -375,12 +385,14 @@ export default function App() {
   useEffect(() => {
     const getUser = async () => {
       try {
-        console.log(`Use Effect getUser Ran.`);
+        // const secret = new URLSearchParams(window.location.search).get('secret');
+        // const userId = new URLSearchParams(window.location.search).get(
+        //   "userId"
+        // );
+        // await account.createSession(userId, secret)
         const userData = await account.get();
 
-        console.log(userData.email);
         setUser(userData.email);
-        
       } catch (err) {
         console.error(`MAYDAY?: ${err}`);
       }
@@ -395,7 +407,7 @@ export default function App() {
       try {
         const userData = await account.get();
         const userId = userData.$id; // Get the current user's ID
-        console.log(userId)
+
         // Fetch Personal Expenses
         const personalRes = await databases.listDocuments(
           import.meta.env.VITE_DATABASE_ID, // databaseId
@@ -577,7 +589,7 @@ export default function App() {
 
               <Category
                 headerTitle="Savings 🌱"
-                description="Retirement, Emergency Fund, Big Purchase Goals etc."
+                description="Retirement, Emergencies, Big Purchases, etc."
                 expenses={savingsExpenses}
                 addExpense={addSavingsExpense}
                 deleteExpense={deleteExpense}
