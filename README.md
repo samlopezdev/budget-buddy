@@ -3,7 +3,7 @@ Budget Buddy is a tool that allows you to track and organize your monthly expens
 
 **Link to project:** https://budgetbuddytracker.netlify.app/
 
-![Budget Buddy Tracker](https://github.com/user-attachments/assets/70bb3acb-7399-4687-af3f-05af1a5ef6fa)
+![Budget Buddy Tracker](https://github.com/user-attachments/assets/637fc6fd-bf17-4a6c-9f32-64aaa8150a2f)
 
 
 ## How It's Made:
