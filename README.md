@@ -20,4 +20,4 @@ There's a lot of data fetching happening in the app, so I’d like to add a load
 
 During this hackathon, we were challenged to learn as much as we could about Appwrite and what it can do. Appwrite offers a lot of functionality that I didn't get to experiment with in this project, but my initial impression of it is that it's an extremely intuitive way to get a backend setup done very quickly. After getting a brief overview of how it works, I had to quickly figure out how to use it in my project and adapt as needed. For the most part, I focused on using the Databases and Authentication tools for this project.
 
-This was also one of my first projects where I decided to use TypeScript! I've found that it's basically JavaScript with guardrails, and it helped me catch unusual behavior or bugs early on in the process. Can't wait to learn more about it and use it in future projects.
+This was also one of my first projects where I decided to use TypeScript! I've found that it's basically JavaScript with guardrails, and it helped me catch unusual behavior or bugs early on in the process. Can't wait to learn more about it and use it in future projects!
